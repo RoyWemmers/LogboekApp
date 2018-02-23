@@ -2,5 +2,34 @@
 
 include_once 'db.php';
 
-$_POST['email'] = $email;
-$_POST['pwd'] = $pwd;
+if(empty($_POST["email"]) || empty($_POST["password"]))  
+{  
+	echo 'All fields are required';  
+
+}  
+else  
+{  
+	$query = "SELECT * FROM login WHERE email = :email AND password = :password";  
+	$statement = $db->prepare($query);  
+	$statement->execute(  
+	     array(  
+	          'email'     =>     $_POST["email"],  
+	          'password'     =>     $_POST["password"]  
+	     )  
+	);  
+
+
+	$count = $statement->rowCount();  
+	if($count > 0)  
+	{  
+     	$_SESSION["email"] = $_POST["email"];  
+     	echo "Geslaagd!"; 
+	}  
+	else  
+	{  
+     	echo '<label>Wrong Data</label>';  
+	}  
+}  
+
+
+
