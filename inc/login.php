@@ -23,7 +23,7 @@ else
 	if($count > 0)  
 	{  
      	$_SESSION["email"] = $_POST["email"];  
-     	echo "Geslaagd!"; 
+     	header('overview.php');
 	}  
 	else  
 	{  
