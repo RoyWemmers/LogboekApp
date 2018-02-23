@@ -3,7 +3,7 @@
 
 
 db.php
-<?php 
+// <?php 
 
 
-	$db = new PDO('mysql:host=localhost;dbname=logboekapp;charset=utf8mb4', 'root', '');
+	// $db = new PDO('mysql:host=localhost;dbname=logboekapp;charset=utf8mb4', 'root', '');
