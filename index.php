@@ -10,8 +10,8 @@
         <label for="email">Email</label>
         <input type="email" name="email" id="email-for">
 
-        <label for="pwd">Password</label>
-        <input type="password" name="pwd" id="pwd">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
 
         <button type="submit">Login</button>
     </form>
